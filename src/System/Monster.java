@@ -1,8 +1,5 @@
 package System;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 public class Monster {
     private Stats stats = new Stats();
     private Buffs buffs = new Buffs();
