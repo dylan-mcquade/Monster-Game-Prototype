@@ -4,17 +4,20 @@ public class Monster {
     private Stats stats = new Stats();
     private Buffs buffs = new Buffs();
     private Status status = new Status();
+    private MType type = new MType();
 
     public Monster(){
         stats = new Stats();
         buffs = new Buffs();
         status = new Status();
+        type = new MType();
     }
 
-    public Monster(float attack, float defense, float magicAttack, float magicDefense, float speed, float skill, int health){
+    public Monster(float attack, float defense, float magicAttack, float magicDefense, float speed, float skill, int health, int type){
         stats = new Stats(attack, defense, magicAttack, magicDefense, speed, skill, health);
         buffs = new Buffs();
         status = new Status();
+        this.type = new MType(type);
     }
 
     public void updateStats(){
