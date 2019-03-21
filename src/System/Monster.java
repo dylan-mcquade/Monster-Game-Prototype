@@ -15,12 +15,11 @@ public class Monster {
         attacks = new AttackList();
     }
 
-    public Monster(float attack, float defense, float magicAttack, float magicDefense, float speed, float skill, int health, int type
-    , Attack attack1, Attack attack2, Attack attack3, Attack attack4){
+    public Monster(float attack, float defense, float magicAttack, float magicDefense, float speed, float skill, int health,
+                   Attack attack1, Attack attack2, Attack attack3, Attack attack4){
         stats = new Stats(attack, defense, magicAttack, magicDefense, speed, skill, health);
         buffs = new Buffs();
         status = new Status();
-        this.type = new MType(type);
         attacks = new AttackList(attack1, attack2, attack3, attack4);
     }
 
