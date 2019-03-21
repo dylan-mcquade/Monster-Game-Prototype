@@ -16,8 +16,9 @@ public class Monster {
     }
 
     public Monster(float attack, float defense, float magicAttack, float magicDefense, float speed, float skill, int health,
-                   Attack attack1, Attack attack2, Attack attack3, Attack attack4){
+                   MType type, Attack attack1, Attack attack2, Attack attack3, Attack attack4){
         stats = new Stats(attack, defense, magicAttack, magicDefense, speed, skill, health);
+        this.type = type;
         buffs = new Buffs();
         status = new Status();
         attacks = new AttackList(attack1, attack2, attack3, attack4);
