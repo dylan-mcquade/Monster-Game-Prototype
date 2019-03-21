@@ -17,4 +17,12 @@ public class MType {
     public void addWeakness(MType type){
         weaknesses.add(type);
     }
+
+    public ArrayList<MType> getResistances(){
+        return resistances;
+    }
+
+    public ArrayList<MType> getWeaknesses(){
+        return weaknesses;
+    }
 }

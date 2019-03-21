@@ -4,21 +4,21 @@ public class Monster {
     private Stats stats = new Stats();
     private Buffs buffs = new Buffs();
     private Status status = new Status();
-    private MType type = new MType();
+    private TypeList typeList = new TypeList();
     private AttackList attacks = new AttackList();
 
     public Monster(){
         stats = new Stats();
         buffs = new Buffs();
         status = new Status();
-        type = new MType();
+        typeList = new TypeList();
         attacks = new AttackList();
     }
 
     public Monster(float attack, float defense, float magicAttack, float magicDefense, float speed, float skill, int health,
-                   MType type, Attack attack1, Attack attack2, Attack attack3, Attack attack4){
+                   TypeList typeList, Attack attack1, Attack attack2, Attack attack3, Attack attack4){
         stats = new Stats(attack, defense, magicAttack, magicDefense, speed, skill, health);
-        this.type = type;
+        this.typeList = typeList;
         buffs = new Buffs();
         status = new Status();
         attacks = new AttackList(attack1, attack2, attack3, attack4);

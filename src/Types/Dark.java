@@ -14,4 +14,6 @@ public class Dark extends MType{
     public Dark(){
 
     }
+
+
 }
