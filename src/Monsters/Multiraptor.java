@@ -9,7 +9,7 @@ import Types.Fire;
 
 public class Multiraptor extends Monster{
     public Multiraptor(){
-        super(10,10,10,10,10,10,10,new TypeList(new Fire()),
+        super(10,10,10,10,10,10,10,new TypeList(new Fire(true)),
                 new ShockJaw(), new FireBall(), new SlipstreamSmash(), new Waterjet());
     }
 }
