@@ -8,7 +8,7 @@ public class Buffs {
     }
 
     //Million getters and setters
-    public float getAttack() {
+    public float getAttack(){
         return attack;
     }
 
@@ -54,35 +54,5 @@ public class Buffs {
 
     public void setSkill(float skill) {
         this.skill = skill;
-    }
-
-    public void applyBuff(float rank, int type){
-        switch (type){
-            case 1:
-                attack += rank;
-                return;
-            case 2:
-                defense += rank;
-                return;
-            case 3:
-                magicAttack += rank;
-                return;
-            case 4:
-                magicDefense += rank;
-                return;
-            case 5:
-                speed += rank;
-                return;
-            case 6:
-                skill += rank;
-                return;
-             default:
-                 System.out.println("Buff type error, number passed does not correspond to any stat.");
-                 return;
-
-        }
-
-
-
     }
 }

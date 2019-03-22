@@ -24,6 +24,32 @@ public class Monster {
         attacks = new AttackList(attack1, attack2, attack3, attack4);
     }
 
+    public void applyBuff(int rank, String type){
+        switch (type) {
+            case "attack":
+                buffs.setAttack(buffs.getAttack() + rank);
+                return;
+            case "defense":
+                buffs.setDefense(buffs.getDefense() + rank);
+                return;
+            case "magicAttack":
+                buffs.setMagicAttack(buffs.getMagicAttack() + rank);
+                return;
+            case "magicDefense":
+                buffs.setMagicDefense(buffs.getMagicDefense() + rank);
+                return;
+            case "speed":
+                buffs.setSpeed(buffs.getSpeed() + rank);
+                return;
+            case "skill":
+                buffs.setSkill(buffs.getSkill() + rank);
+                return;
+            default:
+                System.out.println("Buff type error, number passed does not correspond to any stat.");
+                return;
+            }
+        }
+
     public void updateStats(){
         stats.setTotalAttack(stats.getBaseAttack() + (stats.getBaseAttack()*buffs.getAttack()));
         stats.setTotalDefense(stats.getBaseDefense() + (stats.getBaseDefense()*buffs.getDefense()));
