@@ -21,12 +21,6 @@ public class Stats {
         baseHealth = health;
     }
 
-    public void heal(int heal){
-        currentHealth += heal;
-    }
-
-
-
     //Million getters and setters
     public float getBaseAttack() {
         return baseAttack;

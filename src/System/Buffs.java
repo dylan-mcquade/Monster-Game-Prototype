@@ -1,58 +1,59 @@
 package System;
 
 public class Buffs {
-    private float attack, defense, magicAttack, magicDefense, speed, skill;
+    private int attack, defense, magicAttack, magicDefense, speed, skill;
 
     public Buffs(){
         attack = defense = magicAttack = magicDefense =  speed = skill = 0;
     }
 
     //Million getters and setters
-    public float getAttack(){
+
+    public int getAttack() {
         return attack;
     }
 
-    public void setAttack(float attack) {
+    public void setAttack(int attack) {
         this.attack = attack;
     }
 
-    public float getDefense() {
+    public int getDefense() {
         return defense;
     }
 
-    public void setDefense(float defense) {
+    public void setDefense(int defense) {
         this.defense = defense;
     }
 
-    public float getMagicAttack() {
+    public int getMagicAttack() {
         return magicAttack;
     }
 
-    public void setMagicAttack(float magicAttack) {
+    public void setMagicAttack(int magicAttack) {
         this.magicAttack = magicAttack;
     }
 
-    public float getMagicDefense() {
+    public int getMagicDefense() {
         return magicDefense;
     }
 
-    public void setMagicDefense(float magicDefense) {
+    public void setMagicDefense(int magicDefense) {
         this.magicDefense = magicDefense;
     }
 
-    public float getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 
-    public void setSpeed(float speed) {
+    public void setSpeed(int speed) {
         this.speed = speed;
     }
 
-    public float getSkill() {
+    public int getSkill() {
         return skill;
     }
 
-    public void setSkill(float skill) {
+    public void setSkill(int skill) {
         this.skill = skill;
     }
 }

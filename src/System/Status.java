@@ -25,15 +25,6 @@ public class Status {
         this.recharge = recharge;
     }
 
-    public void cure(){
-        burn = false;
-        sleep = false;
-        fatigue = false;
-        poison = false;
-    }
-
-
-
     //Million getters and setters
     public boolean isBurn() {
         return burn;

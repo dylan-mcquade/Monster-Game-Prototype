@@ -24,6 +24,53 @@ public class Monster {
         attacks = new AttackList(attack1, attack2, attack3, attack4);
     }
 
+    public void cureAll(){
+        status.setBurn(false);
+        status.setPoison(false);
+        status.setFatigue(false);
+        status.setSleep(false);
+    }
+
+    public void curePoison(){
+        status.setPoison(false);
+    }
+
+    public void cureBurn(){
+        status.setBurn(false);
+    }
+
+    public void cureSleep(){
+        status.setSleep(false);
+    }
+
+    public void cureFatigue(){
+        status.setFatigue(false);
+    }
+
+    public void poison(){
+        status.setPoison(true);
+    }
+
+    public void burn(){
+        status.setBurn(true);
+    }
+
+    public void sleep(){
+        status.setSleep(true);
+    }
+
+    public void fatigue(){
+        status.setFatigue(true);
+    }
+
+    public void heal(int healing){
+        stats.setCurrentHealth(stats.getCurrentHealth()+healing);
+    }
+
+    public void healAll(){
+        stats.setCurrentHealth(stats.getBaseHealth());
+    }
+
     public void applyBuff(int rank, String type){
         switch (type) {
             case "attack":
@@ -51,11 +98,11 @@ public class Monster {
         }
 
     public void updateStats(){
-        stats.setTotalAttack(stats.getBaseAttack() + (stats.getBaseAttack()*buffs.getAttack()));
-        stats.setTotalDefense(stats.getBaseDefense() + (stats.getBaseDefense()*buffs.getDefense()));
-        stats.setTotalMagicAttack(stats.getBaseMagicAttack() + (stats.getBaseMagicAttack()*buffs.getMagicAttack()));
-        stats.setTotalMagicDefense(stats.getBaseMagicDefense() + (stats.getBaseMagicDefense()*buffs.getMagicDefense()));
-        stats.setTotalSpeed(stats.getBaseSpeed() + (stats.getBaseSpeed()*buffs.getSpeed()));
-        stats.setTotalSkill(stats.getBaseSkill() + (stats.getBaseSkill()*buffs.getSkill()));
+        stats.setTotalAttack(stats.getBaseAttack() + (stats.getBaseAttack()*(buffs.getAttack()*(float)0.2)));
+        stats.setTotalDefense(stats.getBaseDefense() + (stats.getBaseDefense()*(buffs.getDefense()*(float)0.2)));
+        stats.setTotalMagicAttack(stats.getBaseMagicAttack() + (stats.getBaseMagicAttack()*(buffs.getMagicAttack()*(float)0.2)));
+        stats.setTotalMagicDefense(stats.getBaseMagicDefense() + (stats.getBaseMagicDefense()*(buffs.getMagicDefense()*(float)0.2)));
+        stats.setTotalSpeed(stats.getBaseSpeed() + (stats.getBaseSpeed()*(buffs.getSpeed()*(float)0.2)));
+        stats.setTotalSkill(stats.getBaseSkill() + (stats.getBaseSkill()*(buffs.getSkill()*(float)0.2)));
     }
 }
