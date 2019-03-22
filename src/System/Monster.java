@@ -104,5 +104,11 @@ public class Monster {
         stats.setTotalMagicDefense(stats.getBaseMagicDefense() + (stats.getBaseMagicDefense()*(buffs.getMagicDefense()*(float)0.2)));
         stats.setTotalSpeed(stats.getBaseSpeed() + (stats.getBaseSpeed()*(buffs.getSpeed()*(float)0.2)));
         stats.setTotalSkill(stats.getBaseSkill() + (stats.getBaseSkill()*(buffs.getSkill()*(float)0.2)));
+        stats.setTotalAttack(Math.round(stats.getTotalAttack()));
+        stats.setTotalDefense(Math.round(stats.getTotalDefense()));
+        stats.setTotalMagicAttack(Math.round(stats.getTotalMagicAttack()));
+        stats.setTotalMagicDefense(Math.round(stats.getTotalMagicDefense()));
+        stats.setTotalSpeed(Math.round(stats.getTotalSpeed()));
+        stats.setTotalSkill(Math.round(stats.getTotalSkill()));
     }
 }
